@@ -11,11 +11,27 @@ Audrie Lex L. Afundar
 
 a.) What can you say about these data?
 
+``` r
+cat("Skewness for arch.1:", skewness(arch.1),"\n")
+```
+
     ## Skewness for arch.1: -0.5085663
+
+``` r
+cat("Skewness for prog.1:",skewness(prog.1),"\n")
+```
 
     ## Skewness for prog.1: -0.3104593
 
+``` r
+cat("Skewness for arch2:",skewness(arch2),"\n")
+```
+
     ## Skewness for arch2: 0.4532101
+
+``` r
+cat("Skewness for prog2:",skewness(prog2),"\n")
+```
 
     ## Skewness for prog2: -0.2799966
 
@@ -32,11 +48,31 @@ easier to calculate than the exact formula given in Equation 2.1.
 b.) Write a program to calculate this and apply it to the data in
 results.txt (results.csv). Is it a reasonable approximation?
 
+``` r
+P_arch1 <- (3*(mean(arch.1)-median(arch.1)))/sd(arch.1)
+cat("Skewness for arch.1 using Pearon's:",P_arch1,"\n")
+```
+
     ## Skewness for arch.1 using Pearon's: -0.5472727
+
+``` r
+P_prog1 <- (3*(mean(prog.1)-median(prog.1)))/sd(prog.1)
+cat("Skewness for prog.1 using Pearson's:",P_prog1,"\n")
+```
 
     ## Skewness for prog.1 using Pearson's: -0.5448956
 
+``` r
+P_arch2 <- (3*(mean(arch2)-median(arch2)))/sd(arch2)
+cat("Skewness for arch2 using Pearson's:",P_arch2,"\n")
+```
+
     ## Skewness for arch2 using Pearson's: 0.7196062
+
+``` r
+P_prog2 <- (3*(mean(prog2)-median(prog2)))/sd(prog2)
+cat("Skewness for prog2 using Pearson's:",P_prog2,"\n")
+```
 
     ## Skewness for prog2 using Pearson's: -0.4308381
 
@@ -52,6 +88,13 @@ Therefore, it was not a reasonable approximation.
 a.) form the stem-and-leaf display for each gender, and discuss the
 advantages of this representation compared to the traditional histogram;
 
+``` r
+female <-c(57, 59, 78, 79, 60, 65, 68, 71, 75, 48, 51, 55, 56, 41, 43, 44, 75, 78, 80, 81, 83, 83, 85)
+male <-c(48, 49, 49, 30, 30, 31, 32, 35, 37, 41, 86, 42, 51, 53, 56, 42, 44, 50, 51, 65, 67, 51, 56, 58, 64, 64, 75)
+
+stem(female)
+```
+
     ## 
     ##   The decimal point is 1 digit(s) to the right of the |
     ## 
@@ -60,6 +103,10 @@ advantages of this representation compared to the traditional histogram;
     ##   6 | 058
     ##   7 | 155889
     ##   8 | 01335
+
+``` r
+stem(male)
+```
 
     ## 
     ##   The decimal point is 1 digit(s) to the right of the |
