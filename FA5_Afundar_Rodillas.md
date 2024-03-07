@@ -107,7 +107,6 @@ Nundecided_notG <-undecided_notG$AddChild(C_G_N)
 plot(root)
 ```
 
-    ## Google Chrome was not found. Try setting the `CHROMOTE_CHROME` environment variable to the executable of a Chromium-based browser, such as Google Chrome, Chromium or Brave.
 
 ![](FA5_Afundar_Rodillas_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 (Note: to easily digress the diagram, the 3rd level represents the G of
